@@ -60,7 +60,7 @@ export default function App() {
     const getRandowWordAsArray = () => {
         const randomNumber = Math.round(Math.random() * words.length);
         const randowWordAsArray = words[randomNumber].toUpperCase().split('');
-        console.log(randowWordAsArray);
+        // console.log("The answer", randowWordAsArray);
         return randowWordAsArray;
     };
 
