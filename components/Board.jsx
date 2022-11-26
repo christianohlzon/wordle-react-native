@@ -15,9 +15,10 @@ export function Board({
 
     const RemainingGuesses = () => {
         if (remainingGuesses === 0) return;
-        const currentGuess = isGameOver && previousGuesses.length < 5 ? 0 : 1;
+        const currentGuessOffset =
+            isGameOver && previousGuesses.length < 5 ? 0 : 1;
         const unusedGuesses = [
-            ...Array(remainingGuesses - currentGuess).keys(),
+            ...Array(remainingGuesses - currentGuessOffset).keys(),
         ];
         return unusedGuesses.map((row) => {
             return <RemainingGuessRow key={row} />;
