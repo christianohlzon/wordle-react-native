@@ -37,7 +37,7 @@ export function GuessRow({ currentGuess, noWordGuesses }) {
 
     return (
         <Animated.View style={{ transform: [{ translateX: anim.current }] }}>
-            <View className='flex flex-row justify-between'>
+            <View className="flex flex-row justify-between">
                 {currentGuess.map((letter, index) => {
                     return (
                         <Square
@@ -45,7 +45,7 @@ export function GuessRow({ currentGuess, noWordGuesses }) {
                             letter={letter}
                             isCorrect={false}
                             isInWord={false}
-                            isFocused={true}
+                            isFocused
                         />
                     );
                 })}
@@ -53,10 +53,10 @@ export function GuessRow({ currentGuess, noWordGuesses }) {
                     return (
                         <Square
                             key={emptySquare}
-                            letter=''
+                            letter=""
                             isCorrect={false}
                             isInWord={false}
-                            isFocused={true}
+                            isFocused
                         />
                     );
                 })}
